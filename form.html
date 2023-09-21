@@ -1,30 +1,63 @@
 <!DOCTYPE html>
+<!-- Set Page default Language to-->
 <html lang="en">
+<!-- The page header Information-->
 <head>
+    <!-- Scpecifiy the HTML encoding -->
     <meta charset="UTF-8">
+    
+    <!-- define the vieport Settings of the page-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Define Page Title-->
     <title>Computer Component Order Form</title>
+    
     <!-- Include Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- End Header information-->
 </head>
+
+<!-- Start with body -->
 <body>
+    <!--Create a section that holds the all shown elements on the page. 
+        The class container is used for that the max with will be 100% 
+        The class mt-5 defines the margin top of the page to be 3 times the spacer (at least by default)-->
     <div class="container mt-5">
+        <!--A Heading for our Form
+            The class Text-center formats the heading text to be centered -->
         <h1 class="text-center">Computer Component Order Form</h1>
+
+        <!--Create the Form-->
         <form id="order-form">
+            <!--Crate a section for the first form element
+                The class form-group is used for good a good formating of the botsrap form-->
             <div class="form-group">
+                <!--Define Lable name-->
                 <label for="name">Name:</label>
+                <!--Input for name-->
                 <input type="text" class="form-control" id="name" required>
             </div>
+            <!--Create a section for the second form element-->
             <div class="form-group">
+                <!--Define the email lable-->
                 <label for="email">Email:</label>
+                <!--Define the input for email-->
                 <input type="email" class="form-control" id="email" required>
             </div>
+
+            <!--Create a section for the third form element-->
             <div class="form-group">
+                <!--Define the phone lable-->
                 <label for="phone">Phone Number:</label>
+                <!--Define the input for phone-->
                 <input type="tel" class="form-control" id="phone" required>
             </div>
+
+            <!--Create a section for the selection of the pc components-->
             <div class="form-group">
+                <!--Define the component lable-->
                 <label for="component">Select a Component:</label>
+                <!--Create a selector for components-->
                 <select class="form-control" id="component" required>
                     <option value="">Select a component</option>
                     <option value="cpu">CPU</option>
@@ -34,17 +67,29 @@
                     <option value="motherboard">Motherboard</option>
                 </select>
             </div>
+
+            <!--Create a section where the additonal specific components will be displayed-->
             <div class="form-group" id="extra-options" style="display: none;">
-                <!-- Additional options will be displayed here based on component selection -->
+                <!-- Additional options will be displayed here based on component selection
+                In this code they are provided in the java script file but they could be in a database or in a json file with slite modifications to the script.js file-->
             </div>
+            <!--Create a section for the quantitiy-->
             <div class="form-group">
+                <!--Define the quantity lable-->
                 <label for="quantity">Quantity:</label>
+                <!--Define the input for the quantity lable-->
                 <input type="number" class="form-control" id="quantity" min="1" required>
             </div>
+
+            <!--Create a section for additional comments-->
             <div class="form-group">
+                <!--Define the lable for comments-->
                 <label for="comments">Additional Comments:</label>
+                <!--Define the input for comments-->
                 <textarea class="form-control" id="comments" rows="3"></textarea>
             </div>
+            <!--Button to Submitt
+                The class btn gives the bootstrap default button format and with btn-primary we further define it to be a primary button which provides further styling.-->
             <button type="submit" class="btn btn-primary">Submit Order</button>
         </form>
     </div>
@@ -53,7 +98,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
     
+    <!-- Include Custom JS Script -->
+    <script src="js/script.js"></script>
+
+<!-- End Body and HTML Element -->
 </body>
 </html>
